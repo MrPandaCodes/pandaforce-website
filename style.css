@@ -1,20 +1,31 @@
 html{
     box-sizing: border-box;
-    /*background-image: url(./bamboo-forest.jpg); */ 
+    /*background-image: url(./bamboo-forest.jpg); */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%; 
     background-color: rgb(236, 208, 234);
     font-family: roboto, sans-serif;
+    text-align: center;
+    line-height: 1.4;
   }
   *, *::before, *::after{
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
    }
+  
   ul, li, a {
     list-style-type: none;
     text-decoration: none;
-    color: rgba(231, 10, 10, 0.9);
+    color: rgb(236, 129, 174);
+    font-weight: 600; 
   }
+  body, html {
+    height: 100%;
+  }
+  /* --Navigator START-- */
+  
   .navi li :hover{
     background-color: rgb(100, 150, 200);
   }
@@ -23,58 +34,96 @@ html{
    justify-content: center;
    text-align: center;
    font-size: 0,5em;
-   padding: 1em 1em;
+   padding: 1.1em 0em;
    margin: 0;
   }
   
   li {
   white-space: nowrap;
   width: 33.33%;
-  padding: 0em;
-  margin: 0;
+  }
+  
+  .wrapper{
+    position: fixed;
+    width: 100%;
+    height: 3.6em; 
+    background-color: rgb(73, 233, 212);
   }
   .navi{
-    background-color: rgb(73, 233, 212);
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
   }
   
   .links{
     display: flex;
     width: 100%;
-    margin: 0;
-    padding: 0;
-   }
-  .navi.right.none{
+  }
+  .navi.right{
     display: flex;
     width: 100%;
-    margin: 0;
+    margin: auto 0;
+  }
+  
+  .logo{
+    margin: auto 0; 
+    color: rgb(0,0,0);
+    font-size: 1.5em;
+    font-weight: 700;
     padding: 0;
+    padding-left: 1em;
+    padding-right: 0.2em; 
   }
   .navi.left {
     display: flex;
-    padding: 1em;
+    align-items: center;
     white-space: nowrap;
-  }
-  .navi.left.header {
-    display: flex;
-    padding: 0em 0.5em;
     
   }
-  @media only screen and (max-width: 500px) {
+  .navi.left.header {
+    padding: 0em 0.5em;
+    font-weight: bold;
+    font-size: 1em;
+    color: rgb(236, 129, 174);
+    text-align: center;
+    margin: auto 0;
+  }
+  .navi.menu{
+    display: none
+  }
+  
+  @media only screen and (max-width: 600px) {
     .navi.right.none{
       display: none;
     }
-    #show{
-        width: 30%;
-        height: 1em;
-        float: right;
-    }
-    #show :hover{
-       background-color: azure;
-    }
-    
+      
   }
+  
+  /* --Navigator END-- */
+  /* --Mid Section START-- */
+  
+  .mid-wrapper{
+    background-color: rgb(150,100,50);
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    padding-top: 3.6em;
+  }
+  /* --Mid Section END-- */
+  /* --Footer START-- */
+  .footer-wrapper{
+  background-color: rgb(236, 129, 174);
+  padding: 1em;
+  position: relative;
+  top: 100%;
+  }
+  .footer{
+    color: rgb(92, 161, 230);
+    font-size: 1em;
+    font-weight: bold;
+  }
+  /* --Footer END-- */
+  
