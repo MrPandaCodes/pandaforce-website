@@ -28,6 +28,7 @@ html{
   
   .navi li :hover{
     background-color: rgb(100, 150, 200);
+    color: rgb(81, 27, 180);
   }
   li a{
    display: flex;
@@ -40,7 +41,6 @@ html{
   
   li {
   white-space: nowrap;
-  width: 33.33%;
   height: 100%;
   }
   
@@ -94,16 +94,29 @@ html{
   }
   
   @media only screen and (max-width: 600px) {
-    .navi.right.none{
+    .links{
       display: none;
+    }
+    .navi.right{
+      display: flex;
+      flex: 1;
+           
     }
     .navi.menu{
       display: flex;
-
-    }
+      justify-content: flex-end;
+     }
     .navi.menu button{
-      display: inline-block;
-
+      display: flex;
+      align-items: center;
+      background-color: rgb(214, 170, 189);
+      border-style: solid;
+      border-color: rgb(100, 150, 200);
+      border-radius: 0.4em;
+      border-width: 0.3em;
+      width: fit-content;
+      padding: 0 1.5em;
+      margin-right: 2em;
     }
       
   }
@@ -119,14 +132,16 @@ html{
     height: 100%;
     margin: auto;
     padding-top: 3.6em;
+    overflow: hidden;
   }
   /* --Mid Section END-- */
   /* --Footer START-- */
   .footer-wrapper{
   background-color: rgb(236, 129, 174);
   padding: 1em;
-  position: relative;
+  position: sticky;
   top: 100%;
+  
   }
   .footer{
     color: rgb(92, 161, 230);
