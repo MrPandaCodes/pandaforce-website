@@ -1,10 +1,9 @@
 html{
     box-sizing: border-box;
-    /*background-image: url(./bamboo-forest.jpg); */
+    background-image: url(./img/bg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%; 
-    background-color: rgb(236, 208, 234);
+    background-size: cover; 
     font-family: roboto, sans-serif;
     text-align: center;
     line-height: 1.4;
@@ -22,14 +21,12 @@ html{
     font-weight: 600; 
   }
   body, html {
-    height: 100%;
+    height: fit-content;
+    
   }
+
   /* --Navigator START-- */
-  
-  .navi li :hover{
-    background-color: rgb(100, 150, 200);
-    color: rgb(81, 27, 180);
-  }
+    
   li a{
    display: flex;
    justify-content: center;
@@ -92,7 +89,18 @@ html{
   .navi.menu{
     display: none
   }
-  
+  /*--Pseudoclasses and @media Queries-- */
+  .navi li :hover{
+    background-color: rgb(100, 150, 200);
+    color: rgb(81, 27, 180);
+  }
+  .navi.menu .navi.button :hover{
+    background-color:rgb(100, 150, 200);
+  }
+  .navi li :active{
+    background-color: rgb(243, 117, 85);
+  }
+
   @media only screen and (max-width: 600px) {
     .links{
       display: none;
@@ -100,24 +108,32 @@ html{
     .navi.right{
       display: flex;
       flex: 1;
-           
-    }
+     }
     .navi.menu{
       display: flex;
       justify-content: flex-end;
      }
-    .navi.menu button{
+    .navi.menu .navi.button{
       display: flex;
       align-items: center;
-      background-color: rgb(214, 170, 189);
-      border-style: solid;
-      border-color: rgb(100, 150, 200);
-      border-radius: 0.4em;
-      border-width: 0.3em;
+      background-color: rgb(236, 129, 174);
+      border: 0.3em solid rgb(100, 150, 200) ;
+      border-radius: 30%;
       width: fit-content;
-      padding: 0 1.5em;
-      margin-right: 2em;
+      margin-right: 1em;
     }
+    .navi.button a{
+      color: rgb(0, 0, 0);
+      padding: 1em;
+      border-radius: 30%;
+      border: 0.1em solid rgb(100, 150, 200) ;
+      
+
+    }
+    .navi.menu .navi.button :hover{
+      background-color:rgb(100, 150, 200);
+    }
+
       
   }
   
@@ -125,14 +141,150 @@ html{
   /* --Mid Section START-- */
   
   .mid-wrapper{
-    background-color: rgb(150,100,50);
     display: flex;
     flex-flow: column;
-    width: 60%;
+    flex: 1 1;
+    width: 35em;
     height: 100%;
     margin: auto;
-    padding-top: 3.6em;
+    padding: 5em 0em;
     overflow: hidden;
+    gap: 2em;
+  }
+  .intro{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1;
+    gap: 1em;
+    padding: 4em 2em;
+    margin: auto;
+    width: 35em;
+    border: 0.3em solid rgb(236, 129, 174);
+    border-radius: 20%;
+    background-color: rgba(73, 233, 212, 50%);
+    color: rgb(160, 17, 96);
+      
+  }
+  .intro-left{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    font-weight: 900;
+    gap: 1em;
+  }
+
+  .intro-left-top{
+    color: rgb(185, 0, 0);
+  }
+  .intro-left button{
+    background-color: rgba(168, 238, 229, 30%);
+   
+    border: 0.3em solid rgb(18, 126, 235);
+    border-radius: 40%;
+    white-space: nowrap;
+    width: max-content;
+    padding: 0.4em;
+  }
+  
+  .intro-right{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+  .panda-logo{
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 20%;
+    flex: 0 1; 
+    width: 100%;
+    height: 100%;
+  }
+
+  .mid{
+    background-color:rgba(73, 233, 212, 50%);
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 5em 0em;
+    justify-content: center;
+    gap: 2em;
+    margin: 0 auto;
+    border-radius: 30%;
+    border: 0.2em solid rgb(221, 123, 177) ;
+  }
+  .mid-top{
+    display: flex;
+    flex-flow: row;
+    justify-content: center
+
+  }
+
+  .mid-bottom{
+    background-color: ;
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    gap: 3em;
+
+  }
+  
+  .mid-bottom-line{
+    background-color:none;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+
+  }
+
+  .mid-bottom-box{
+    background-color:none;
+    display: flex;
+    flex-flow: column;
+    border: 0.5em solid rgb(160, 17, 96);
+    border-radius: 30%;
+    padding: 2em;
+  }
+
+  .mid2{
+
+  }
+  .mid3{
+
+  }
+
+    /*--Pseudoclasses and @media Queries-- */
+  @media only screen and (max-width: 600px) {
+    .mid-wrapper {
+      width: 100%;
+      height: 100%;
+     }
+    .intro{
+      display: flex;
+      flex-flow: column;
+      border: none;
+      width: 100%;
+           
+    }
+
+    .intro-right{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .panda-logo{
+      margin: auto;
+      width: 14em;
+      height: 14em;
+    }
+  
+    .mid{
+
+    }
   }
   /* --Mid Section END-- */
   /* --Footer START-- */
@@ -144,7 +296,7 @@ html{
   
   }
   .footer{
-    color: rgb(92, 161, 230);
+    color: rgb(81, 27, 180);
     font-size: 1em;
     font-weight: bold;
   }
